@@ -3,6 +3,7 @@ import { Router } from "express";
 import { loginAdmin, registerAdmin } from "../controller/admin.controller.js";
 import { upload, uploadFile, getFiles } from "../controller/PDF.controller.js";
 import { incrementVisitorCount, getVisitorCount } from "../controller/visitor.controller.js";
+import { getUpcomingExams, uploadUpcomingExam } from "../controller/upcoming.controller.js";
 
 
 const router = Router();
@@ -17,4 +18,6 @@ router.get("/get_files", getFiles);
 router.post("/visit", incrementVisitorCount);
 router.get("/visitor-count", getVisitorCount);
 
+router.post("/upload-Upcoming-Exam",uploadUpcomingExam);
+router.get("/get-Upcoming-Exams",getUpcomingExams);
 export default router;
